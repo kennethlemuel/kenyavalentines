@@ -8,3 +8,14 @@
     top: 0 px;
     left: 0 px;
 }
+
+#yes_button{
+    color: black;
+    width: 150 px;
+    height: 50 px;
+    background-color: white;
+
+    position: absolute;
+    top:  0 px;
+    left: 150 px;
+}
