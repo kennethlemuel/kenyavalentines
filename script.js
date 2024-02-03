@@ -5,5 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('no_button');
 
     button.addEventListener('click', ()=> alert('You clicked me'));
+    button.addEventListener('mouseover', () => {
+        console.log('You hovered me');
+    })
 
 });
