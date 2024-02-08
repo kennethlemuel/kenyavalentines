@@ -5,14 +5,18 @@ const maxWidth = window.innerWidth - buttonWidth;
 const maxHeight = window.innerHeight - buttonHeight;
 
 window.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('no_button');
+    const no_button = document.getElementById('no_button');
+    const yes_button = document.getElementById('yes_button'); 
 
-    button.addEventListener('click', ()=> alert('You clicked me'));
-    button.addEventListener('mouseover', () => {
-        button.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
-        button.style.top = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
+    no_button.addEventListener('click', ()=> alert('You clicked me'));
+    no_button.addEventListener('mouseover', () => {
+        no_button.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
+        no_button.style.top = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
     })
 
+    yes_button.addEventListener('click', ()=>{
+        window.open('yes.html', '_self');
+    })
 
 
 });
