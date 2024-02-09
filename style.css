@@ -1,21 +1,25 @@
-#no_button {
-    color: black;
-    width: 150 px;
-    height: 50 px;
-    background-color: white;
-
-    position: absolute;
-    top: 0 px;
-    left: 0 px;
+body {
+    background-image: url('./media/heartbg.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
-#yes_button{
+button {
     color: black;
-    width: 150 px;
-    height: 50 px;
+    width: 150px;
+    height: 50px;
     background-color: white;
-
-    position: absolute;
-    top:  0 px;
-    left: 150 px;
+    margin: 10px; /* Add some margin between the buttons */
 }
+
+#yes_button, #no_button {
+    margin-top: 20px; /* Adjust the top margin if necessary */
+}
+
