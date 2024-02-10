@@ -7,20 +7,25 @@
     <title>Tip: You can't say no.</title>
     <link rel="stylesheet" href="style.css">
     <script src="./script.js"></script>
-    <style>
-        @import url('https://fonts.cdnfonts.com/css/des-morgan');
-    </style>
-
 </head>
-<body>
-    <audio autoplay loop preload="auto">
-        <source src="./media/Fish In The Pool.mp3" type="audio/mpeg" />
-        This text displays if the audio tag isn't supported.
-    </audio>
-    <h1>Will you be my Valentine?</h1>
+<body class = "home" onload ="addEvent()">
+    <h1>Will you be my <span>Valentine</span>?</h1>
     <div class="button_group" role="group">
         <button id="yes_button">YES</button>
         <button id="no_button">NO</button>
     </div>
+
+    <script>
+        function addEvent(){
+           document.body.addEventListener("mousemove", play)
+         }
+        function play() {
+          var audio = document.getElementById("bgaudio");
+          audio.volume = 0.05;
+          audio.play();
+        }
+
+      </script>
+
 </body>
 </html>
