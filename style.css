@@ -1,19 +1,5 @@
-
-body.home {
+body {
     background-image: url('./media/heartbg.gif');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-
-body.page1 {
-    background-image: url('./media/stars.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
