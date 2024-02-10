@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="x-icon" href="./media/catheart.png">
+    <link rel="icon" href="./media/catheart.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip: You can't say no.</title>
     <link rel="stylesheet" href="style.css">
-    <script src = "./script.js"></script>
+    <script src="./script.js"></script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/des-morgan');
+    </style>
+
 </head>
 <body>
-   <h1>Will you be my Valentine? </h1>
-    <button id = "yes_button">YES</button>
-    <button id = "no_button">NO</button>
+    <audio autoplay loop preload="auto">
+        <source src="./media/Fish In The Pool.mp3" type="audio/mpeg" />
+        This text displays if the audio tag isn't supported.
+    </audio>
+    <h1>Will you be my Valentine?</h1>
+    <div class="button_group" role="group">
+        <button id="yes_button">YES</button>
+        <button id="no_button">NO</button>
+    </div>
 </body>
 </html>
