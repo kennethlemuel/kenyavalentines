@@ -9,6 +9,7 @@
     <script src="./script.js"></script>
 </head>
 <body class = "home" onload ="addEvent()">
+    <audio id="bgaudio" src="./media/Fish In The Pool.mp3" loop></audio>
     <h1>Will you be my <span>Valentine</span>?</h1>
     <div class="button_group" role="group">
         <button id="yes_button">YES</button>
@@ -17,7 +18,7 @@
 
     <script>
         function addEvent(){
-           document.body.addEventListener("mousemove", play)
+           document.body.addEventListener("mouseover", play)
          }
         function play() {
           var audio = document.getElementById("bgaudio");
