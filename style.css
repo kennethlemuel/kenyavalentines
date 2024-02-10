@@ -1,4 +1,5 @@
-body {
+
+body.home {
     background-image: url('./media/heartbg.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;  
@@ -11,22 +12,80 @@ body {
     margin: 0;
 }
 
-#yes_button {
-    color: black;
+body.page1 {
+    background-image: url('./media/stars.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button_group {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+button {
+    position: absolute;
     width: 150px;
     height: 50px;
-    background-color: white;
-    margin: 10px;
-    margin-top: 20px; 
+    height: inherit;
+    cursor: pointer;
+    font-family: 'Garamond', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#yes_button {
+    color: white;
+    width: 150px;
+    height: 50px;
+    background-color: pink;
+    margin-left: -200px;
+    border: none;
+    box-shadow: 0 2px 4px rgb(187, 157, 157);
+    border-radius: 5%;
+    transition: transform 0.3s;
+}
+
+#yes_button:hover{
+    transform: translateY(-10px);
 }
 
 #no_button {
-    color: black;
+    color: pink;
     width: 150px;
     height: 50px;
     background-color: white;
-    top: 150 px;
-    left: 0 px;
+    margin-right: -200px;
+    padding: 0;
+    border: none;
+    box-shadow: 0 2px 4px rgb(211, 207, 207);
+    border-radius: 5%;
+}
+
+@import url('https://fonts.cdnfonts.com/css/des-morgan');
+
+h1 {
+    color: pink;
+    font-size: 90px;
+    font-family: 'Garamond', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 2px 2px 2px rgb(196, 138, 138);
+}
+
+h1 span{
+    color: rgba(222,73,69,255);
+    text-shadow: 2px 2px 2px rgb(194, 177, 177);
 }
 
 
