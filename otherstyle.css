@@ -72,6 +72,21 @@ section{
     border-radius: 10px;
 }
 
+.sec4 .content .video {
+    position: relative;
+    left: 600px;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.sec4 .info{
+    position: relative;
+    width: 700px;
+    margin-left: 50px;
+    left: -600px;
+}
+
 .content .text-box{
     z-index: 222;
     background: rgba(255,255,255,0.1);
