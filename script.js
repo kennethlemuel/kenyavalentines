@@ -20,6 +20,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
-
-

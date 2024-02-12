@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="otherstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <section class="sec2">
@@ -17,11 +18,12 @@
                 </div>  
                 <div class="text-box">
                     <h3>The First Time We Held Hands!!</h3>
-                    <p>lorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem lorem</p>
+                    <p>When I learned that you actually planned this date as a way to PDKT and a reason to hold my hands, I was like ":o". This was the beginning of our relationship and my heart was beating so very fast.</p>
                 </div>
             </div>
             <div class="media-icons">
-                <a href="#" class="heart"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="heart"><i class="fa fa-heart" onclick="playsound()"></i></a>
+                <audio id="audio" style="display:none" src="./media/cas.mp3" ></audio>
             </div>
         </div>
     </section>
@@ -34,15 +36,81 @@
                 </div>
                 <div class="info">
                     <h4 class="info-title">How I Felt</h4>
-                    <p>lorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem loremlorem lorem lorem lorem</p>
+                    <p>If I had to be honest, this was one of the most exciting moment in my entire life. I think if I wanted to go through something again, it would be this. When we were getting unlucky on gachas, I thought you'd reject me because I was unlucky on that day.</p>
                 </div>
             </div>
         </div>
     </section>
     <section class="sec4">
         <div class="container">
-            <h3 class="section-title"></h3>
+            <h3 class="section-title">Our LDR!</h3>
+            <div class = "container">
+                <div class="heading">Some of my Favourite LDR Moments!</div>
+                    <div class="video-container">
+                        <div class="videogal">
+                            <video src="./media/headbang.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="videogal">
+                            <video src="./media/fortnite.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="videogal">
+                            <video src="./media/cookin.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="videogal">
+                            <video src="./media/toothless.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="videogal">
+                            <video src="./media/lildance.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="videogal">
+                            <video src="./media/roblox.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="videogal">
+                            <video src="./media/trip.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="videogal">
+                            <video src="./media/seizure.mp4" autoplay muted loop></video>
+                        </div>
+                        <div class="videogal">
+                            <video src="./media/exercise.mp4" autoplay muted loop></video>
+                        </div>
+                    </div>
+            
+            </div>
         </div>
     </section>
+    <script>
+        ScrollReveal({
+            //reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        }); 
+
+        ScrollReveal().reveal('.main-title, .section-title', {delay:500, origin:'left' });
+        ScrollReveal().reveal('.sec2 .video, .info', {delay: 600, origin:'bottom'});
+        ScrollReveal().reveal('.text-box', {delay: 700, origin:'right'});
+        ScrollReveal().reveal('.media-icons i', {delay: 500, origin:'bottom', interval:200});
+        ScrollReveal().reveal('.sec2 .video, .sec3 .video', {delay: 500, origin:'top'});
+        ScrollReveal().reveal('.media-info li', {delay: 500, origin:'left', interval:200});
+
+
+        var vid = document.querySelectorAll('videogal')
+        vid.forEach(play=> play.addEventListener('click',()=>{
+            play.classList.toggle('active');
+            if(play.paused){
+                play.play();
+            }else{
+                play.pause();
+                play.currentTime = 0;
+            }
+        }));
+
+        function playsound(){
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+    
 </body>
 </html>

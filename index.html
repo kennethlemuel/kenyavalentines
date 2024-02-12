@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip: You can't say no.</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="./script.js"></script>
 </head>
 <body class = "home" onload ="addEvent()">
     <audio id="bgaudio" src="./media/Fish In The Pool.mp3" loop></audio>
+    
     <h1>Will you be my <span>Valentine</span>?</h1>
     <div class="button_group" role="group">
         <button id="yes_button">YES</button>
         <button id="no_button">NO</button>
     </div>
-
+    <div class="content">
+      <button id="myBtn" onclick="myFunction()"><i class="fas fa-volume-mute"></i></button>
+    </div>
     <script>
         function addEvent(){
            document.body.addEventListener("mouseover", play)
@@ -25,8 +29,28 @@
           audio.volume = 0.05;
           audio.play();
         }
+        var audio = document.getElementById("bgaudio");
+        var btn = document.getElementById("myBtn");
 
-      </script>
+        //declare unmute icon variable
+        var muteIcon = '<i class="fas fa-volume-up"></i>'
 
+        //declare mute icon variable
+        var unmuteIcon = '<i class="fas fa-volume-mute"></i>'
+
+        function myFunction() {
+          // toggle the muted property of the video element
+          audio.muted = !audio.muted;
+
+          // if the video is muted, set the btn.innerHTML to unmuteIcon
+          // otherwise, set it to the muteIcon
+          if (audio.muted) {
+            btn.innerHTML = unmuteIcon;
+          } else {
+            btn.innerHTML = muteIcon;
+          }
+}
+
+    </script>
 </body>
 </html>

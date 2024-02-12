@@ -75,3 +75,17 @@ h1 span{
 }
 
 
+
+#myBtn {
+    top: 10px; 
+    left: 10px; 
+    position: fixed;
+    z-index: 50;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #ffffff;
+    color: #e2b1b1;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
