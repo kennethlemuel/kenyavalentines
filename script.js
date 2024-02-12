@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     yes_button.addEventListener('click', ()=>{
-        window.open('yes.html', '_self');
+        window.open('date.html', '_self');
     })
 
 });

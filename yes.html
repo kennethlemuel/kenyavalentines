@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./media/catheart.png" type="image/x-icon">
     <link rel="stylesheet" href="otherstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <title>I Love You!</title>
 </head>
 <body>
+    <section class="sec1">
+        <div class="container">
+            <h2 class = "main-title">A Quick Word From Me!!</h2>
+            <div class="content">
+                <div class = "sillyimg">
+                    <a href="#" class="sounds" data-file="https://example.com/wp-content/uploads/chick">
+                        <img src="./media/doredore.jpg" alt="doredore" onClick="playMySong()">
+                    </a>
+                </div>
+                <div id="song"> 
+                    <audio id="shorttalk" >
+                        <source src="./media/a lil word.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="text-box">
+                    <h3>The First Time We Held Hands!!</h3>
+                    <p>When I learned that you actually planned this date as a way to PDKT and a reason to hold my hands, I was like ":o". This was the beginning of our relationship and my heart was beating so very fast.</p>
+                </div>   
+            </div>
+        </div>
+    </section>
     <section class="sec2">
         <div class="container">
             <h2 class="main-title">A Glimpse Into Our Life Together <3</h2>
@@ -88,11 +111,11 @@
         }); 
 
         ScrollReveal().reveal('.main-title, .section-title', {delay:500, origin:'left' });
-        ScrollReveal().reveal('.sec2 .video, .info', {delay: 600, origin:'bottom'});
-        ScrollReveal().reveal('.text-box', {delay: 700, origin:'right'});
+        ScrollReveal().reveal('.sec2 .video, .info, .sillyimg', {delay: 600, origin:'bottom'});
+        ScrollReveal().reveal('.text-box, .heading', {delay: 700, origin:'right'});
         ScrollReveal().reveal('.media-icons i', {delay: 500, origin:'bottom', interval:200});
         ScrollReveal().reveal('.sec2 .video, .sec3 .video', {delay: 500, origin:'top'});
-        ScrollReveal().reveal('.media-info li', {delay: 500, origin:'left', interval:200});
+        ScrollReveal().reveal('.video-container ', {delay: 500, origin:'left', interval:200});
 
 
         var vid = document.querySelectorAll('videogal')
@@ -109,6 +132,17 @@
         function playsound(){
             var audio = document.getElementById("audio");
             audio.play();
+        }
+
+
+        let audio = document.getElementById("shorttalk")
+
+        function playMySong(){
+            if(audio.paused){
+                audio.play()
+            } else {
+                audio.pause()
+            }
         }
     </script>
     

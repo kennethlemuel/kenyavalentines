@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./media/catheart.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="date.css">
+    <script src="date.js"></script>
+    <title>Date?</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1 style="text-align: center;">You've been cordially invited by yours truly, <span>Kenneth Lemuel</span>, to a fancy Indonesian lunch.</h1>
+        <img src="assets/oh-yay.gif" alt="yes" class="image-2 hide" />
+        <button id ="btn">Let's do it!! </button>
+    
+    </div>
+    <script>
+        document.getElementById('btn').addEventListener('click', () => {
+            window.open('https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MWFpZ2hqNmpuNnA3MGEzaXBqbTNkcDFrY3Mga2VubmV0aGxlbXVlbDA1QG0&amp;tmsrc=kennethlemuel05%40gmail.com', '_blank');
+            window.open('yes.html', '_self');
+        });
+    </script>
+</body>
+</html>
